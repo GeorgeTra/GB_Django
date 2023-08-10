@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'base.html' %}
+    {% block title %} {{ title }} {% endblock %}
+</head>
+<body>
+    {% block content %}
+        <p><a href="/" style="text-decoration: none">Главная</a></p>
+        <h3>{{ title }}</h3>
+        {% if total %}
+            <p>{{ total }}</p>
+        {% endif %}
+        {% if products %}
+            <p>{{ products.total_quantity }}</p>
+        {% endif %}
+    {% endblock %}
+</body>
+</html>
